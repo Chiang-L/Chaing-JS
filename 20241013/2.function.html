@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 自訂函式function,名字為 hello ,他沒有傳遞參數，他的工作就只是印出，hello world//
+    function hello() {
+      console.log('hello world');
+    }
+
+    hello(); // 名為 hello 函示,透過()符號執行
+    hello();
+    hello();
+    hello();
+
+    console.clear();
+
+    // hello();  //名字為 hello ,可以傳遞參數，他的工作就只是印出，hello world//
+    function hello(name) {
+      console.log(`hello world, ${name} !!`);
+    }
+    //hello(); // 名為 hello 函式, 透過()符號執行
+    hello('loki');
+    hello('ban');
+    hello('van');
+    hello();
+
+    console.clear();
+
+    // 自訂 函數 function ,名字為 hello ,可以傳遞參數(可指定預設值)，他的工作就是印出，hello world//
+    function hello(name = 'to you') {
+      console.log(`hello world, ${name} !!`);
+
+      //if (name === underfined) console.log(error,plz input name');
+      //els console.log(hello world, $(name) !!`);
+    }
+    //hello(); // 名為 hello 函式, 透過()符號執行
+    hello('loki');
+    hello('ban');
+    hello('van');
+    hello();
+
+    console.clear();
+
+    //word = 可以是數字、字串、function、boolean;//
+    word = function (name) { //匿名函式，沒有名字的function
+      console.log(`hello ${name} !!`);
+    };
+
+    word2 = function sayhello(name) { //帶名字的function
+      console.log(`hello ${name} !!`);
+    };
+
+    ///////////////////////////////////////////////////////////
+    (function () {
+      console.log('hello world');
+    })();//左邊()匿名函式，右邊()直接執行
+
+    console.clear();
+
+    say1 = function (name) {
+      str = 'hello ' + name;
+      return str;
+    }
+
+    ans = say1('LI');  // ans直接自動回覆字串
+    console.log(ans);
+    ///////////////////////////////////////////////////////////
+
+    say2 = function (name) {
+      str = 'hello ' + name;
+      return str;
+    }
+    console.log(say2('LI')); //say1簡化版本
+    ///////////////////////////////////////////////////////////
+    
+    say3 = function (name) {
+      console.log('-------------');
+      return 'hello ' + name;
+    }
+      console.log(say3('LI'));
+
+
+    
+    ///////////////////////////////////////////////////////////
+
+
+
+  </script>
+</body>
+
+</html>

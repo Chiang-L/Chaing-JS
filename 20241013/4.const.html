@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 100; // 宣告一個變數可以變化的數
+        //  經過的幾百行，不小心又宣告同名的a變數
+
+        //let a= 'A'; // let 可以保護不會重新被宣告，若重複宣告會顯示錯誤報錯
+        a += 100; //不用重新宣告，但可以重新指定
+        console.log(a);
+
+
+        if (true) { // let 在一個區塊作用域底下，可以獨立宣告成為{}內變數且可以獨自使用
+            //let a = 'A';
+            let a = 'A', b = 'B';
+            console.log(a, b);
+
+        }
+        console.log(a, b);
+
+        console.clear();
+
+        /////////////////////////////////////////////////////////////////////////////
+
+        const c = 100;  // 宣告一個常數，可以不可變化且常駐的數,目前屬於全域常數
+
+        if (true) {
+            const c = 'C'; // {}常數我獨特用的，不會讀外面的C
+            console.log(c);
+        }
+        console.clear();
+        /////////////////////////////////////////////////////////////////////////////
+
+        // null vs undefined vs 空值 vs NaN
+
+        let aa = null; // 塞一個值為 "沒有東西的object"
+        let bb; // undefied 就是沒有任何東西指定給他，也就是沒有賦予值
+        let cc = ''; // string 空字串
+        let dd = 5 * 'A'; // number ,NaN 為非數字 Not a Number
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

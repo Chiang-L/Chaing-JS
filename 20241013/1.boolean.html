@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    a = 100;
+    b = 100;
+    c = 200;
+    str1 = 'AA';
+    str2 = 'AA';
+    str3 = 'BB';
+    strNum = '200';
+
+    ///////////////////////////////////////////////////////////////////////////
+    console.log(a == b);  //ture
+    console.log(a == b);  //false
+    console.log(a == c);  //false
+    console.log(a != c);  //ture，不等於，使用 (!)否定 +(=)等號
+
+
+    console.clear();
+
+    console.log(c == strNum); //ture,因為==是不嚴謹的比較，他不會考慮型別type,所以為ture
+    console.log(c === strNum); //false,當使用===是進行完全等於比較，嚴謹的包含考慮型別type
+    console.log(c !== strNum); //ture,當使用===是進行完全不等於比較，嚴謹的包含考慮型別type
+    /*
+    嚴謹的不等於考量，也就完全懂於，現在要考慮 => 左邊包含型別，是否不等於右邊包含型別
+    200 of number !== '200' of string
+    數字為200 完全不等於 字串200
+    為ture
+    */
+    console.clear();
+
+    //////////////////////////////////////////////////////////////////////////
+    /*比較，比大小*/
+    d = 100;
+    e = 200;
+
+    console.log(d > e); //false
+    console.log(d < e); //true
+    console.log(d >= 100); //true
+    console.log(e <= 200); //true
+
+    console.clear();
+    //////////////////////////////////////////////////////////////////////////
+
+    /*複合邏輯，將多個 boolean 組合起來的結果維為何 boolean */
+    // && and, || or 
+    /* and, 都要 true ,結果是ture,只要一個false出現,結果就是false*/
+    consoe.log(true && false && true); //false
+    console.log(true && true); //true
+    console.log(true && true && true); //ture
+
+    console.clear();
+    //////////////////////////////////////////////////////////////////////////
+
+    /* || or 或著的意思，只要有一個true , 結果就是true , 只要碰到一個true，就結果確定是true */
+    console.log(false || true || false); //true
+    console.log(false || false || false); //false
+
+    //(true || false) && (false || true);
+    //((true && true) || (false && false)) || false;
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        a = 100; // 臨時變數，不應該這麼做，需要在任何變數前做個宣告
+        var b = 200; //宣告變數(var為宣告)，跟瀏覽器正式宣告一個變數存在
+        var c; // 宣告，只是還沒有定義任何值，目前讀到的訊息為 undefined
+        */
+
+
+        ///////////////////////////////////////////////////////////////////////////////////
+        /*
+        var b = 200;
+        var c;
+        function test() {
+            var d = 100; // d 宣告在一個function內，他只作用在於這一個function作用域內
+            console.log(b); // b 是一個全域變數，讓遊覽器可以讀到b
+            console.log(d); // d 讀的到的是 100
+        }
+
+        test();
+
+        console.log(b);
+        console.log(d); // 不認得 d ,因為它是一個區間變數，遊覽器無法得知他
+
+        console.clear();
+        */
+        ///////////////////////////////////////////////////////////////////////////////////
+
+        function test2() {
+            var b = 100;
+            console.log(b);
+        }
+
+        console.log('b =', b);
+        test2();
+        console.log('b =', b);
+
+        ///////////////////////////////////////////////////////////////////////////////////
+        if(true) {
+            var e = 100; // if 的 {} 不是一個區間是一個區塊，他仍然是一個全域變數
+            console.log(e);
+        }
+
+        console.log('e =', e);
+
+        var e= true; //var可以被重新宣告，這是不太好的副作用
+        console.log(e);
+        
+    </script>
+</body>
+
+</html>
