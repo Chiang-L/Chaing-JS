@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        /////////////////////////////////////////////////////////////////////
+        // for (初始; 條件;結束動作(一定要有結束條件否則會一直無限迴圈))
+
+        /*
+        // ex: hello 跑 5 次
+        for (let i = 0; i < 5; i++) {
+            console.log('hello', i);
+        }
+
+        let str = '';
+        for (let i = 0; i < 5; i++) {
+            str += 'A';
+        }
+        console.log(str);
+        */
+        /////////////////////////////////////////////////////////////////////
+
+        //試著印出1,2,3,4
+        /*
+        for (let i = 0; i < 5; i++1) {
+            console.log('hello', i);
+        }
+        */
+
+        //試著印出1,4,7,10
+        /*
+        for (let i = 1; i < 11; i+=3) {
+            console.log('hello', i);
+        }
+        */
+
+        //試著印出1,3,5,7,9,11
+        /*
+        for (let i = 1; i < 12; i+=2) {
+            console.log('hello', i);
+        }
+        */
+
+        //試著印出5,10,15,20,25
+        /*
+        for (let i = 0; i < 30; i+=5) {
+            console.log('hello', i);
+        }
+        */
+
+        //試著印出1,2,4,8,16,32,64
+        /*
+        for (let i = 1; i < 70; i *= 2) {
+            console.log(i);
+        }
+        */
+
+        /////////////////////////////////////////////////////////////////////
+
+            //九九乘法(雙迴圈)
+        
+            for (let i = 2; i < 10; i++){
+                if(i<10) console.log('-----------------');
+                for (let j = 1; j < 10; j++) {
+                    console.log(`${i}*${j}=${i * j}`);
+                }
+            }
+            
+        
+
+    </script>
+
+</body>
+
+</html>
