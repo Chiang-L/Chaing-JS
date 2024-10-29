@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const ary = [];
+        for (let i = 0; i < 10; i++) {
+            ary.push(`A${i}`);
+        }
+
+        ///////////////////////////
+        /*
+        function showMe(val, idx) {
+            console.log(`index=>${idx}, value=>${val}`);
+        }
+
+        ary.forEach(showMe);
+        */
+
+        ///快速寫法///
+
+        ary.forEach(function (val, idx) {
+            console.log(`index=>${idx}, value=>${val}`);
+        });
+
+
+    </script>
+
+</body>
+
+</html>
