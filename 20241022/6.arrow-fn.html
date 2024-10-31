@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //
+        function showMe(val, idx) {
+            console.log(`index=> ${idx},value=>${val}`);
+        }
+        aa = showMe
+        bb = function (val, idx) {//匿名fun
+            console.log(`index=> ${idx},value=>${val}`);
+        }
+        //
+        cc = (val, idx) => {//箭頭fun
+            console.log(`index=> ${idx},value=>${val}`);
+        }
+
+        ////////////////////////////////////////////
+
+        cc = (v) => console.log(v);
+
+        dd = (s) => s * 3;//若有return可以直接省略
+
+
+        for await (const item of ary) {
+            console.log(item);
+        }
+        ////////////////////////////////////////////
+        //filter,保留的return true,不要的return false
+        ary = ary.filter((val) => val !== 'A');
+
+        //map映射
+        ary = ary.map((val) => val + '~~');
+    </script>
+</body>
+
+</html>
