@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //產生6個數字(不重複),1-49
+        const rand = (min, max) => {//隨機整數的機器
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        //方法一
+        ////////////////////////////////////////////////////////////////////////////
+        let lottoPool = [];//大球池
+        const getBall = [];//選中的球
+        for (i = 1; i < 50; i++)lottoPool.push(`(${i})`);//大球池初始化(1-49)
+
+        //共6抽
+        for (i = 1; i < 7; i++) {
+            const findIdx = rand(0, lottoPool.length - 1); //決定抽出哪個號碼,總陣列長度-1
+            const finBall = lottoPool[findIdx];//找到球號,複製球號為變數
+            //getBall.push(finBall);//將抽搐的球號退入getBall
+            getBall.push(finBall.toString().padStart(0, '0')); // 將抽中的球號轉為字串並補零
+
+            //清除球池內已經抽出選過的球號，利用filter過濾,並回傳false(清除陣列內以抽出的數字，但不影響原有陣列內的任何內容)
+            //checkBall為檢查每次的球號,findBall為指定的球號
+            lottoPool = lottoPool.filter(function (checkBall) {
+                return checkBall !== finBall;
+            });
+        }
+
+        //將選中的球由小排至大
+        getBall.sort((a, b) => a - b);
+        console.log(getBall.sort());
+    </script>
+</body>
+
+</html>
